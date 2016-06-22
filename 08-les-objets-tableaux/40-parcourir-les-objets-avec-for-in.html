@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html> 
+<head>
+	<meta charset="utf-8" />
+	<title>Parcourir un objet avec for in</title> 
+</head>
+
+<body> 
+	<script>
+		var family = {
+			self : 'Sebastien', // "self" est l'identifiant qui permet d'afficher sebastien
+			sister : 'Laurence',
+			brother: 'Ludovic',
+			counsin_1 : 'Pauline', 
+			counsin_2 : 'Guillaume'
+		};
+
+		for (var id in family) { // On stocke l'identifiant dans "id" pour parcourir l'objet "family"
+			alert(family[id]);
+
+		}
+	</script>
+	
+</body> 
+</html>

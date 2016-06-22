@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="utf-8" />
+		<title>Parents Node</title> 
+	</head>
+
+
+	<body>
+		<blockquote>
+			<p id="myP">
+				Ceci est un paragraphe ! 
+			</p>
+		</blockquote>
+
+
+		<script>
+			var paragraph  = document.getElementById('myP');
+			var blockquote = paragraph.parenNode;
+			alert(blockquote);
+		</script>
+		
+	</body> 
+</html>

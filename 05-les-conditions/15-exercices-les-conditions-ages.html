@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html> 
+<head>
+	<meta charset="utf-8" />
+	<title>Exercices sur les Conditions</title> 
+</head>
+
+<body> 
+	<script>
+		//  voir la catégorie de l'âge 
+		var age = parseInt(prompt('Quel est ton âge ?'));
+		if (age <= 0) {
+			alert("tu as zero an ! tu es donc un bebe");
+		} else if (1 <= age && age < 18) {
+			alert("Tu es mineur et pas encore majeur");
+		} else if (18 <= age && age < 50) {
+			alert("Vous êtes majeur mais pas encore senior");
+		} else if (50 <= age && age < 60) {
+			alert("Vous êtes senior mais pas encore retraité");
+		} else if (60 <= age && age <= 120) {
+			alert("Vous êtes retarité ! profitez de vos temps libres");
+		} else if (age > 120) {
+			alert("Plus de 120 ans serieux ça existe ça !");
+		} else {
+			alert("Croyez toujours en Dieu");
+		}
+	</script>
+</body> 
+</html>

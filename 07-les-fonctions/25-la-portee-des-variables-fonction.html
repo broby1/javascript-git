@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html> 
+<head>
+	<meta charset="utf-8" />
+	<title>La portée des variables -fonctions</title> 
+</head>
+
+<body> 
+	<script>
+		// La portée des variables - Nous parle des variables globales et locale. Le concept est le suivant :  Toute variable declarée en dehors d'une fonction peut être lue que dans cette fonction et appélé partout y compris à l'intérieur de la fonction, c'est une "variable globale".  Mais par contre, la variable declarée au sein d'une fonction ne peut être lue que dans cette fonction, c'est-à-dire en faisant appel à cette fonction. C'est une "variable locale"
+
+		var  ohai = 'Hello world !'; // Ceci est une variable globale
+
+		function sayHello () {
+			alert(ohai);
+		} 
+		sayHello (); 
+			
+	</script>
+</body> 
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="utf-8" />
+		<title>Ajouter ou editer du texte HTML</title> 
+	</head>
+
+
+	<body>
+		
+		<div id="myDiv">
+			<p>Un peu de texte
+				<a href="">et un lien</a>
+			</p>
+		</div>
+
+		<script>
+			var div = document.getElementById('myDiv').innerHTML = '<blockquote>Je mets une citation à la place du paragraphe </blockquote>';
+			alert(div.innerHTML);
+		</script>
+		
+	</body> 
+</html>

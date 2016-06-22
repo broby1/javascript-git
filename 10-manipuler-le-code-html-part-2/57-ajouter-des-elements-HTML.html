@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="utf-8" />
+		<title>Ajouter des éléments HTML</title> 
+	</head>
+
+
+	<body>
+		<blockquote>
+			<p id="myP">
+				Ceci est un paragraphe !
+				<a href="">Et un lien dynamique</a> et un <strong>je suis en gras</strong> 
+			</p>
+		</blockquote>
+
+
+		<script>
+				// L'ajout d'élémént dans le DOM se fait en 3 temps : 
+				// 1) On crée l'élément
+				// 2) On lui affecte des attributs 
+				// 3) On l'insère dans le document, et ce n'est qu'à ce moment là qu'il sera ajouté
+				// 4) Ajouter le contenu textuel
+
+				// 1 - Création de l'élément 
+				var newlink = document.createElement('a');
+
+				// 1bis - Ajouter le contenu textuel ou noeuds textuels
+				 var newlinkText = document.createTextNode('Le site pour apprendre la programmation');
+
+				// 2 - Affectation des attributs
+				newlink.id = 'sdz-link';
+				newlink.href = 'http://www.siteduzero.com';
+				newlink.title = 'Découvrez le site Openclassroom';
+				newlink.setAttribute('tabindex','10');
+
+				newlink.appendChild(newlinkText);
+
+				// 3 - Insertion tous les éléments dans le document via l'id (myP)
+				document.getElementById('myP').appendChild(newlink);
+
+				
+
+
+		</script>
+		
+	</body> 
+</html>

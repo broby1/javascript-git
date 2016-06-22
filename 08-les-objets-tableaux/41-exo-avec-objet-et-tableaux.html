@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html> 
+<head>
+	<meta charset="utf-8" />
+	<title>Exercice prenoms avec objets et tableaux</title> 
+</head>
+
+<body> 
+	<script>
+		var prenoms = [], // creation du tableau vide 
+			ajoutPrenoms;
+
+		while (ajoutPrenoms = prompt('Entrer un prenom :')) {
+			// si la valeur assignée à la variable "ajoutPrenoms" est valide (différente de "null") alors la boucle s'exécute
+			prenoms.push(ajoutPrenoms); // Ajoute un nouveau prenom au tableau
+		} 
+
+		if (prenoms.length > 0) { // On regarde le nombre d'items 
+			alert(prenoms.join(' ')); // Affiche les prénoms à la suite 
+		} else {
+			alert('Il n\'y aucun prénom en mémoire !');
+		}
+		
+	</script>
+	
+</body> 
+</html>

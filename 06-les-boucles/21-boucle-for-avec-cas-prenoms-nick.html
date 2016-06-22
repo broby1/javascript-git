@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html> 
+<head>
+	<meta charset="utf-8" />
+	<title>La boucle "for" avec cas nick</title> 
+</head>
+
+<body> 
+	<script>
+		for (var nicks = '', nick; true;) {
+			nick = prompt('Entrer un prénom :');
+			
+			if (nick) {
+				nicks += nick + ' '; 
+			} else {
+				break;
+			}
+		}
+		alert(nicks);
+	</script>
+</body> 
+</html>

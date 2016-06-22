@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html> 
+<head>
+	<meta charset="utf-8" />
+	<title>La boucle "While" Amelioration avec Break</title> 
+</head>
+
+<body> 
+	<script>
+		// la boucle "while" c'est repeter tant que la condition est validée, c'est-à-dire qu'elle est à 'false'.
+		
+		var nicks = '', nick;
+		while (true) { // ça veut dire tant que la variable "true" est vraie.
+			nick = prompt('Entrez un prénom :');
+			if (nick) {
+				nicks += nick + ' '; // Ajoute le nouveau prénom ainsi q'une espace juste après.
+			} else {
+				break; // On quitte la boucle
+			}
+		}
+		alert(nicks); // Affiche les prénoms à la suite
+	</script>
+</body> 
+</html>

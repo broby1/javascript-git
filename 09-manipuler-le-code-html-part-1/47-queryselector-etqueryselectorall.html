@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="utf-8" />
+		<title>querySelector et queSelectorAll</title> 
+	</head>
+
+	<body>
+		<div id="menu">
+			<div class="item">
+				<span>Element 1</span>
+				<span>Element 2</span>
+			</div>
+
+			<div class="publicite">
+				<span>Element 3</span>
+				<span>Element 4</span>
+			</div>
+		</div>
+		<div class="contenu">
+			<span>Introduction au contenu de la page ...</span>
+		</div>
+
+		<script>
+			var query = document.querySelector('#menu .item span'), 
+				queryAll = document.querySelectorAll('#menu .item span');
+			alert(query.innerHTML); // Affiche : Élément 1
+
+			alert(queryAll.length); // Affiche : "2"
+			alert(queryAll[0].innerHTML + ' - ' + queryAll[1].innerHTML);
+				// Affiche : "Élément 1 - Élément 2"
+		</script>
+		
+	</body> 
+</html>

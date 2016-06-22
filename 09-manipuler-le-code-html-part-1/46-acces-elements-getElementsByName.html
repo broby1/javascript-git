@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="utf-8" />
+		<title>Acceder aux éléments - getElementsByName</title> 
+	</head>
+
+	<body>
+		<div id="myDiv">
+			<p>Un peu de texte <a href="">et un lien</a></p>
+		</div>
+
+		<script>
+			// Cette methode permet de recuperer tout le contenu qui possede un attribut "name" que nous spécifions : Il fonctionne de la même manière que "getElementsById()"
+
+			var divs = document.getElementsByTagName('div');
+			for (var i = 0, c = divs.length; i < c ; i++) {
+				alert('Element n° ' + (i + 1) + ' : ' + divs[i]);
+			} 
+		</script>
+	</body> 
+</html>

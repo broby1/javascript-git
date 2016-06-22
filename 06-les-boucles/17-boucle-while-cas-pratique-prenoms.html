@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html> 
+<head>
+	<meta charset="utf-8" />
+	<title>La boucle "While"</title> 
+</head>
+
+<body> 
+	<script>
+		// la boucle "while" c'est repeter tant que la condition est validée, c'est-à-dire qu'elle est à 'false'.
+		
+		var nicks = '', nick, proceed = true;
+		while (proceed) { // ça veut dire tant que la variable "proceed" est vraie.
+			nick = prompt('Entrez un prénom :');
+			if (nick) {
+				nicks += nick + ' '; // Ajoute le nouveau prénom ainsi q'une espace juste après.
+			} else {
+				proceed = false; // Aucun prénom n'a été entré, donc on fait en sorte d'invalider la condition.
+			}
+		}
+		alert(nicks); // Affiche les prénoms à la suite
+	</script>
+</body> 
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="utf-8" />
+		<title>Parents Node</title> 
+	</head>
+
+
+	<body>
+		<blockquote>
+			<p id="myP">
+				Ceci est un paragraphe !
+				<a href="">Et un lien dynamique</a> et un <strong>je suis en gras</strong> 
+			</p>
+		</blockquote>
+
+
+		<script>
+			var paragraph = document.getElementById('myP');
+			var fisrt = paragraph.fisrtChild;
+			var last = paragraph.lastChild; 
+
+			alert(fisrt.nodeValue);
+			alert(last.fisrtChild.data);
+		</script>
+		
+	</body> 
+</html>

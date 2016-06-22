@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html> 
+<head>
+	<meta charset="utf-8" />
+	<title>La boucle "for" avec cas nick avec "i"</title> 
+</head>
+
+<body> 
+	<script>
+		// rajouter des nom
+		for (var i = 0, savePrenoms = '', ajoutPrenoms; true; i++ ) {
+			// j'interagie avec l'utilisateur
+			ajoutPrenoms = prompt('Quel est ton prenom ?');
+			
+			// je mets l'etat de mon boolean
+			if (ajoutPrenoms) {
+
+				// Je le stocke dans la variable 'savePrenoms'
+				savePrenoms += ajoutPrenoms + ' ';
+
+			} else {
+				break; 
+			} 
+		}
+		alert(savePrenoms);
+	</script>
+</body> 
+</html>

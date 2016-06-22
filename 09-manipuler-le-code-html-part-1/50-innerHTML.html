@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="utf-8" />
+		<title>La classe</title> 
+	</head>
+
+
+	<body>
+		<!-- innerHTML permet de recuperer du code HTML sous forme de texte même s'il y a des balise html il les retournera sous forme de texte -->
+		<div id="myDiv">
+			<p>Un peu de texte
+				<a href="">et un lien</a>
+			</p>
+		</div>
+
+		<script>
+			var div = document.getElementById('myDiv');
+			alert(div.innerHTML);
+		</script>
+		
+	</body> 
+</html>

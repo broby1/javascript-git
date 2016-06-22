@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html> 
+<head>
+	<meta charset="utf-8" />
+	<title>L'objet window</title> 
+</head>
+
+<body>
+
+	<script>
+		window.alert('Hello world avec window !');
+		alert('Hello world avec alert !');
+
+		(function () { // On utilise une "IEF" pour isoler du code
+			text = 'Variable accessible !'; // Cette variable n'a pas jamais été déclarée et partant on lui attribue une valeur
+		}) ();
+		alert(text); // Affiche : "Variable accessible !"
+	</script>
+	
+</body> 
+</html>

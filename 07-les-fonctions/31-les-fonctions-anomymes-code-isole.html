@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html> 
+<head>
+	<meta charset="utf-8" />
+	<title>Les fonctions anomymes - code isolé</title> 
+</head>
+
+<body> 
+	<script>
+		// 
+		var test = 'noir'; // On crée une variable test contenant le mot 'noir'.
+
+		(function () { // Début de la zone isolée
+			var test = 'blanc'; // On crée une variable du même nom avec le contenu "blanc" dans la zone isolée.
+			alert('Dans la zone isolée la couleur est ' + test);
+
+		})(); // Fin de la zone isolée. Les variables créées dans cette zone sont détruites.
+
+		alert('Dans cette zone non-isolée, la couleur est : ' + test);
+		// Le texte final contien bien le mot noir, vu que la zone isolée n'a aucune influence sur le reste du code.
+
+	</script>
+</body> 
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html> 
+<head>
+	<meta charset="utf-8" />
+	<title>Les variables globales</title> 
+</head>
+
+<body> 
+	<script>
+		// Qu'est ce que cela donne quand on a une variable golobale et une variable locale avec le même message ? Qui a la priorité sur l'autre ? C'est la variable locale qui a la priorité car elle est plus précise. C'est un peu comme en CSS
+		
+		var message = 'Ici le message globale';
+
+		function showMsg () {
+			var message = 'Ici le message locale';
+			alert(message);
+		}
+
+		showMsg (); // function
+		alert(message); // variable globale
+	</script>
+</body> 
+</html>

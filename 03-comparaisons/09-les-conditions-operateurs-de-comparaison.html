@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html> 
+<head>
+	<meta charset="utf-8" />
+	<title>Les opérateurs de comparaisons</title> 
+</head>
+
+<body> 
+	<script>
+		 var num1 = 2, num2 = 2, num3 = 4, resultat;
+		 resultat = num1 == num2;
+		 alert('N° 1 - Contenu et type egal ' + resultat); // le resultat est true car num1 est egal à num2 
+
+		 resultat = num1 != num2;
+		 alert('N° 2 - Contenu different de :' + resultat); // 'true' car num1 est different de num2
+
+		 resultat = num2 === num3; // contenu et type egale à num3 'false' car le type est parail mais pas le contenu
+		 alert('N° 3 - contenu et type ' + resultat);
+
+		 resultat = num1 !== num3; //  true
+		 alert('N° 4 - Contenu ou type different de ' + resultat);
+
+		 resultat = num3 <= num2; // 'false'
+		 alert('N° 5 - ' + resultat);
+
+		 resultat = num2 >= num3; // 'false' car 2 n'est pas inférieur à 4
+		 alert('N° 6 - ' + resultat);
+
+
+	</script>
+
+</body> 
+</html>

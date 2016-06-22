@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html> 
+<head>
+	<meta charset="utf-8" />
+	<title>La boucle "for" avec cas nick avec "i"</title> 
+</head>
+
+<body> 
+	<script>
+		for (var i = 0, nicks = '', nick; true; i++) {
+			nick = prompt('Entrez un prenom');
+			if (nick) {
+				nicks += nick + ' ';
+			} else {
+				break;
+			}
+		}
+		alert('Il y a ' + i + ' prénoms :\n\n ' + nicks);
+	</script>
+</body> 
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html> 
+<head>
+	<meta charset="utf-8" />
+	<title>Les Conditions- structure if et else</title> 
+</head>
+
+<body> 
+	<script>
+		if (2 < 8 && 8 >= 4) { // cette condition renvoie "true"
+			alert('la condition est bien verifiée');
+		}
+		if (2 < 8 || 8 <= 4) { // cette condition renvoie 'false'
+			alert('La condition n\'est pas vérifié mais on le saura pas vu que ce code ne s\'exécutera pas !');
+		}
+
+		//  la fonction 'confirm()'
+		if (confirm('Voulez-vous exécuter le code de cette page ?')) {
+			alert('le code a bien été éexécuté !');
+		}
+
+		// La structure 'else' pour dire "sinon"
+		if (confirm('pour accéder à ce site vous devez avoir 18 ans ou plus, cliquez sur "OK" si c\'est le cas.')) {
+			alert('Vous aller être redirigé vers le site.');	
+		} else {
+			alert('Désolé ce site est interdit aux mineurs !');
+		}
+
+	</script>
+</body> 
+</html>

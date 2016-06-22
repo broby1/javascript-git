@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="utf-8" />
+		<title>Lien changé Dynamiquement</title> 
+	</head>
+
+	<body>
+		<a href="www.locationphotocopieur.com" id="myLink">Un lien modifié dynamiquement</a>
+		<script>
+			var link = document.getElementById('myLink');
+			var href = link.href; 
+			alert(href);
+
+			link.href = "http://www.siteduzero.com";
+
+		</script>
+		
+	</body> 
+</html>

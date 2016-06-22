@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="utf-8" />
+		<title>Acceder aux éléments - getElementsByTagName</title> 
+	</head>
+
+	<body>
+		<div id="myDiv">
+			<p>Un peu de texte <a href="">et un lien</a></p>
+		</div>
+
+		<script>
+			// Cette methode permet de recuperer, sous la forme d'un tableau, tous les éléments de famille. Si dans cette page, on veut récupérer tous les "div", il suffit de faire comme ceci : 
+
+			var divs = document.getElementsByTagName('div');
+			for (var i = 0, c = divs.length; i < c ; i++) {
+				alert('Element n° ' + (i + 1) + ' : ' + divs[i]);
+			} 
+		</script>
+	</body> 
+</html>

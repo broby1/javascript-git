@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html> 
+<head>
+	<meta charset="utf-8" />
+	<title>Les Conditions- structure switch</title> 
+</head>
+
+<body> 
+	<script>
+		var tiroir = parseInt(prompt('Choisissez le tiroir à ouvrir (1 à 4)'));
+		switch(tiroir) {
+			case 1:
+			alert('Contient des outils pour dessiner : du papier, des crayons, etc.');
+			break;
+
+			case 2:
+			alert('Ah ? Ce tiroir contient du matériel informatique : des câbles, des composants, etc');
+			break;
+
+			case 3:
+			alert('Ah ? Ce tiroir est fermé, dommage !');
+			break; 
+
+			case 4:
+			alert('Contient des vêtements :  des chemises, des pantalons, etc.');
+			break;
+
+			default:
+			alert("Info du jour :  le meuble ne contient que 4 tiroirs et, jusqu'à preuve du contraire, les tiroirs négatifs n'existent pas. ");
+		}
+
+	</script>
+</body> 
+</html>

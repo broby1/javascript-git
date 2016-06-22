@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="utf-8" />
+		<title>Tester la compatibilité de InnerHTML et textContent</title> 
+	</head>
+
+
+	<body>
+		<div id="myDiv">
+			<p>Un peu de texte<a href=""> et un lien</a>
+			</p>
+		</div>
+
+		<script>
+			var div = document.getElementById('myDiv');
+			var = '';
+
+			if (div.textContent) { // si "textContent" existe ? Alors on s'en sort
+				txt = div.textContent;
+			
+			} else if (div.innerText) { // si "innerText" existe ? Alors on doit être sur IE
+			txt = div.innerText + '[via Internet Explorer]';
+
+			} else {
+				// Si aucun des deux n'existe, cela est sûrement dû au fait qu'il n'y a pas de texte.
+				txt = ''; // On met une chaine de caractère
+			}
+			alert(txt);
+		</script>
+		
+	</body> 
+</html>

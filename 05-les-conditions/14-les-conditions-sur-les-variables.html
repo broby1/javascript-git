@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html> 
+<head>
+	<meta charset="utf-8" />
+	<title>Les Conditions sur les Variables</title> 
+</head>
+
+<body> 
+	<script>
+		// tester l'existence de contenu d'une variable
+		var conditionTest = 'Fonctionne ? Fonctionnera pas ?';
+		if (conditionTest) {
+			alert('Fonctionne !');
+		} else {
+			alert('Fonctionnera pas !');
+		}
+
+		// Le cas de l'operateur OU
+		var conditionTest1 = '', conditionTest2 = 'Une chaine de caractères';
+		alert(conditionTest1 || conditionTest2); // l'operateur OU va se charger de retourner la valeur de la premiere variable dont le contenu est évalué à true. 
+
+	</script>
+</body> 
+</html>
