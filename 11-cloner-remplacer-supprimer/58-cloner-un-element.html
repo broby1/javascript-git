@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="utf-8" />
+		<title>Cloner un element</title> 
+	</head>
+
+
+	<body>
+		<blockquote>
+			<p id="myP">
+				Ceci est un paragraphe !
+				<a href="">Et un lien dynamique</a> et un <strong>je suis en gras</strong> 
+			</p>
+		</blockquote>
+
+
+		<script>
+				// On va cloner un élément créé : 
+				var hr1 = document.createElement('hr');
+				var hr2 = hr1.cloneNode(false); // On ne clone pas ici car le booléan de clonage a été mise à "false". 
+
+				// Par contre ici on va cloner un élément existant :  
+				var paragraphe1 = document.getElementById('myP');
+				var paragraphe2 = paragraphe1.cloneNode(true); 
+
+				// Attention, nous avons cloné notre élément mais ce dernier n'est pas encore "inséré" dans la page tant que je n'ai pas appelé "appendChild()" :
+				paragraphe1.parentNode.appendChild(paragraphe2);
+		</script>
+		
+	</body> 
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="utf-8" />
+		<title>Methode insertBefore</title> 
+	</head>
+
+
+	<body>
+		<p id="myP">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, ullam.
+			<a href="">Et un lien dynamique</a> 
+		</p>
+
+		<script>
+			var paragraphe 		= document.getElementsByTagName('p')[0];
+			var emphasis 		= document.createElement('em'),
+				emphasisText 	= document.createTextNode(' en emphase légère');
+
+			// ajout de l'élément à la page 
+			emphasis.appendChild(emphasisText);
+
+			paragraphe.insertBefore(emphasis, paragraphe.lastChild);
+		</script>
+	</body> 
+</html>

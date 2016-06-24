@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="utf-8" />
+		<title>Remplacer un élément par un autre</title> 
+	</head>
+
+
+	<body>
+		<p id="myP">
+			Ceci est un paragraphe !
+			<a href="">Et un lien dynamique</a> et un <strong>je suis en gras</strong> 
+		</p>
+
+		<script>
+			var link = document.getElementsByTagName('a')[0];
+			var newLabel = document.createTextNode('et un hyperlien');
+
+			link.replaceChild(newLabel, link.firstChild); 		
+		</script>
+	</body> 
+</html>
