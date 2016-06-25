@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="utf-8" />
+		<title>Récupere la position du curseur </title> 
+	</head>
+
+
+	<body>
+		<div id="position"></div>
+		
+		<script>
+			// L'idée ici est de récupérer la position du curseur (clientX et client Y sont deux propriétés)
+			var position 	= document.getElementById('position');
+				document.addEventListener('mousemove', function(e) {
+					position.innerHTML = 'Position X : ' + e.clientX + 'px <br /> Position Y : ' + e.clientY + 'px';
+				}, false);
+		</script>
+	</body> 
+</html>								

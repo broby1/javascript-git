@@ -2,68 +2,34 @@
 <html> 
 	<head>
 		<meta charset="utf-8" />
-		<title>Récréer la structure DOM - TP1</title> 
+		<title>Les évènements</title> 
 	</head>
 
 
 	<body>
-
-
+		<span id="clickme">Cliquez-moi !</span>
+		
 		<script>
-			// 1-  Je crée l'élément du conteneur 
-			var mainDiv 	= document.createElement(div);
-				mainDiv.id  = 'divTP1';
+			var element 	= document.getElementById('clickme');
 
-			// 2- Je crée tous les noeuds textuels et je les regroupe sous forme de tableau, afin de me facilter la tâche
-			var textNode = [
-				document.createTextNode('Le'), 
-				document.createTextNode('World Wide Consertium'),
-				document.createElementTextNode('agrégé par le cygle'),
-				document.createElementTextNode('W3C'),
-				document.createElementTextNode('est un'),
-				document.createElementTextNode('organisme de standardisation'),
-				document.createElementTextNode('à but non-lucratif chargé de promouvoir la compatibilité des technologies du'), 
-				document.createElementTexteNode('World Wild Web'), 
-				document.createElementTexteNode('.')
-			];
+				// Premier évènement click // On crée ici l'évènement
+				element.addEventListener('click', function() { 
+				alert("Et de un !");
+				}, false);
 
-			// 3- Maintenant, je crée les deux balises "strong" et je les ajoute à la variable "textNode" déjà déclarée ci-dessus
-			var strong1 	= document.creatElement('strong');
-			var strong2		= document.createElement('strong');
-							  strong1.appendChild(textNode[1]); 
-							  strong2.appendChild(textNode[3]);
+				// pour supprimer un évènement 
+				element.removeEventListener('click', function, false);
 
-			// 4- Maintenant, je crée les deux balises "a" et je les ajoute à la variable "textNode" déjà déclarée ci-dessus
-			var lien1 		= document.createElement('a'); 
-			var lien2		= document.createElement('a');
+				// Deuxièment évènement click
+					element.addEventListener('click', function() {
+					alert("Et de deux !");
+				}, false);
 
-			// 5- Pour les balises "a" je dois renseigner les attributs (href, title)
-			lien1.href		= 'http://www.wikipedia.fr';
-			lien1.title		= 'Organisme de normalisation du Web'
-							  lien1.appendChild(textNode[5]);
-
-			lien2.href		= 'http://www.locationphotocopieur.fr';
-			lien2.title		= 'Ma dernière réalisation avec le CMS Prestashop'
-							lien2.appendChild(textNode[7]);
-
-			// 6- Maintenant que j'ai tout crée, j'insère le tout dans la variable "mainDiv", celle déclarée au tout début de ma page
-			mainDiv.appendChild(textNode[0]);
-			mainDiv.appendChild(strong1);
-			mainDiv.appendChild(textNode[2]);
-			mainDiv.appendChild(strong2);
-			mainDiv.appendChild(textNode[4]);
-			mainDiv.appendChild(lien1);
-			mainDiv.appendChild(textNode[6]);
-			mainDiv.appendChild(lien2);
-			mainDiv.appendChild(textNode[8]);
-
-			// 7- Pour finir on insère la mainDiv dans le body 
-			document.body.appendChild(mainDiv);
-			alert(mainDiv);
-
-
-
+				// Troixième évènement click
+					element.addEventListener('click', function() {
+					alert("Et de trois !");
+				}, false);
 
 		</script>
 	</body> 
-</html>
+</html>								
