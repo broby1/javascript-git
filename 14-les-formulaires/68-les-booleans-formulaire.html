@@ -15,14 +15,17 @@
 		
 		<script>
 			function check() {
-				var inputs 			= document.getElementsByTagName('input'),
+				var inputs			= document.getElementsByTagName('input'),
 					inputsLength 	= inputs.length;
-					for (var i 	= 0; i < inputsLength; i++) {
+					for (var i = 0;  i < inputsLength;  i++) {
 						if (inputs[i].type == 'radio' && inputs[i].checked) {
-							alert('La case cochée est la n°' + inputs[i].value);
+							alert('La case cochée est le numéro : ' + inputs[i].value);
 						}
 					}
 			}
+
+
+
 		</script>
 	</body> 
 </html>								

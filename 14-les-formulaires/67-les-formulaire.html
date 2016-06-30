@@ -12,12 +12,16 @@
 		<script>
 			var text 	= document.getElementById('text');
 				text.addEventListener('focus', function(e) {
-				e.target.value 	= "Vous avez le focus !"; 
-				}, true);
+					e.target.value = "Vous avez le focus !"; 
+				}, true); 
 
 				text.addEventListener('blur', function(e) {
-				e.target.value 	= "Vous n'avez pas le focus !";
+					e.target.value = "Vous avez perdu le focus !!"; 
 				}, true);
+
+
+
+
 		</script>
 	</body> 
 </html>								

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="utf-8" />
+		<title>Récuperer les propriétés CSS - function getComputedStyle()</title> 
+	</head>
+
+	<style type="text/css">
+		#text {
+			color: red;
+		}
+	</style>
+
+	<body>
+		<div id="text">Je suis de couleur rouge.</div>
+		
+		<script>
+			var text 	= document.getElementById('text');
+				color = getComputedStyle(text, null).color;
+				alert(color);
+		</script>
+	</body> 
+</html>								
