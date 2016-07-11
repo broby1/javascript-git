@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="utf-8" />
+		<title>Les methodes submit et reset en js</title> 
+	</head>
+
+	<body>
+		
+		<form id="myform">
+			<input type="text" placeholder="Entrez un texte" />
+			<br /><br />
+			<input type="submit" value="Envoyer" />
+			<input type="reset" value="Reset">
+		</form>
+		
+		<script>
+			var myform = document.getElementById('myform');
+				myform.addEventListener('submit', function(e) {
+					alert('Vous avez envoyé le formulaire mais ceci a été bloqué pour que vous ne changiez pas de page.');
+					e.preventDefault();
+				}, true);
+
+				myform.addEvenListener('reset', function(e) {
+					alert('Vous avez renitialisé le formulaire !');
+				}, true);
+		</script>
+
+	</body> 
+</html>		 						

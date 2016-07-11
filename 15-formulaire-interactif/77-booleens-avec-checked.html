@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="utf-8" />
+		<title>Booleens avec Checked</title> 
+	</head>
+
+	<body>
+		<label for=""><input type="radio" name="check" value="choix 1" />Choix 1</label>
+		<label for=""><input type="radio" name="check" value="choix 2" />Choix 2</label>
+		<label for=""><input type="radio" name="check" value="choix 3" />Choix 3</label>
+		<label for=""><input type="radio" name="check" value="choix 4" />Choix 4</label>	
+		<input type="button" value="Afficher la case cochée" onclick="check();">
+		
+		<script>
+			// Afficher la section des choix à l'aide d'une boucle for
+			function check() {
+				var inputs = document.getElementsByTagName('input');
+					inputsLength = inputs.length;
+
+				for (var i = 0; i < inputsLength; i++) {
+					if(inputs[i].type == 'radio' && inputs[i].checked) {
+						alert('La choix coché est : ' + inputs[i].value);
+					} 
+				}
+			}
+		</script>
+
+	</body> 
+</html>		 						

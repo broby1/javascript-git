@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="utf-8" />
+		<title>Liste deroulante avec selectedIndex et option</title> 
+	</head>
+
+	<body>
+		
+		<select id="list">
+			<option>Selectionnez votre sexe</option>
+			<option>Homme</option>
+			<option>Femme</option>
+		</select>
+		
+		<script>
+			var list = document.getElementById('list');
+				list.addEventListener('change', function() {
+					// J'affiche le contenu de l'élément <option> ciblé par la propriété selectedIndex
+					alert(list.options[list.selectedIndex].innerHTML);
+				}, true);
+		</script>
+
+	</body> 
+</html>		 						
