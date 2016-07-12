@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="utf-8" />
+		<title>TP: Formulaire interactif</title> 
+	</head>
+	
+	<style>
+		/* Il est préferable de mettre le code CSS dans une feuille de style externe mais ici je le met dans le même fichier de façon exptionnelle ! */
+
+		body {padding-top: 50px;}
+		
+		.form_col {
+			display: inline-block;
+			margin-right: 15px;
+			padding: 3px 0;
+			width: 200px;
+			min-height: 1px;
+			text-align: right;
+		}
+
+		input {
+			padding: 2px;
+			border: 1px solid #ccc;
+			-moz-border-radius: 2px;
+			-webkit-border-radius: 2px;
+			border-radius: 2px;
+			outline: none; /* Cette propriété retire la bordure orange appliquée par certains navigateurs comme  par exemple (Chrome) lors du focus des éléments */
+		}
+
+		input:focus {
+			border-color: rgba(82, 168, 236, 0.75);
+			-moz-box-shadow: 0 0 8px rgba(82, 168, 236, 0.5);
+			-webkit-box-shadow: 0 0 8px rgba(82, 168, 236, 0.5);
+			box-shadow: 0 0 8px rgba(82, 168, 236, 0.5);
+		}
+
+		.correct {border-color: rgba(68, 191, 68, 0.75);}
+		.correct:focus {
+			border-color: rgba(68, 191, 68, 0.75);
+			-moz-box-shadow: 0 0 8px rgba(68, 191, 68, 0.5);
+			-webkit-box-shadow: 0 0 8px rgba(68, 191, 68, 0.5);
+			box-shadow: 0 0 8px rgba(68, 191, 68, 0.5);
+		}
+
+		.incorrect {border-color: rgba(191, 68, 68, 0.75);}
+		.incorrect:focus {
+			border-color: rgba(191, 68, 68, 0.75);
+			-moz-box-shadow: 0 0 8px rgba(68, 191, 68, 0.5);
+			-webkit-box-shadow: 0 0 8px rgba(68, 191, 68, 0.5);
+			box-shadow: 0 0 8px rgba(68, 191, 68, 0.5);
+		}
+
+		.tooltip {
+			display: inline-block;
+			margin-left: 20px;
+			padding: 2px 4px;
+			border: 1px solid #555;
+			background-color: #ccc;
+			-moz-border-radius: 4px;
+			-webkit-border-radius: 4px;
+			border-radius: 4px;
+		}
+
+	</style>
+
+
+	<body>
+		<form action="" id="myForm">
+			<span class="form_col">Sexe :</span>
+			<label><input type="radio" name="sex" value="H" />Homme</label>
+			<label><input type="radio" name="sex" value="F" />Femme</label>
+			<span class="tooltip">Vous devez selectionnez votre sexe</span> 
+			<br /><br />
+
+			<label for="lastName" class="form_col1">Nom :</label>
+			<input type="text" name="lastName" id="lastName" />
+			<span class="tooltip">Un nom ne peut pas faire moins de deux caractères</span>
+			<br /><br />
+
+			<label for="firstName">Prenom :</label>
+			<input type="text" name="firsName" id="firstName" />
+			<span class="tooltip">Un prenom ne peut pas faire moins de 2 carctères</span>
+
+			<label for="age" class="form_col">Âge :</label>
+			<input type="text" name="age" id="age" />
+			<span class="tooltip">L'âge doit être compris entre 5 et 140</span>
+			<br /><br />
+
+			<label for="login" class="form_col">Pseudo : </label>
+			<input type="text" name="login" id="login" />
+			<span class="tooltip">Le pseudo ne peut pas faire moins de 4 caractères</span>
+			<br /><br />
+
+			<label for="pw1" class="form_col">Mot de passe :</label>
+			<input type="password" name="pwd1" id="pwd1" />
+			<span class="tooltip">Le mot de passe ne doit pas faire moins de 6 caractères</span>
+			<br /><br />
+
+			<label for="pwd2" class="form_col">Mot de passe (confirmation)</label>
+			<input type="password" name="pwd2" id="pwd2" />
+			<label for="pwd2" class="tooltip">Le mot de passe de confirmation doit être identique à celui d'origine</label>
+			<br /><br />
+
+			<label for="country" class="form_col">Pays :</label>
+			<select name="country" id="country">
+				<option value="none">Selectionnez votre pays de résidence</option>
+				<option value="en">Angleterre</option>
+				<option value="ca">Canada</option>
+				<option value="us">Etats-Unis</option>
+				<span class="tooltip">Vous devez selectionner votre pays de résidence</span>
+			</select>
+			<br /><br />
+
+			<span class="form_col"></span>
+			<label><input type="checkbox" name="news"  /> Je désire recevoir la newsletter chaque mois</label>
+			<br /><br />
+			
+			<span class="form_col"></span>
+			<input type="submit" value="M'inscrire" />
+			<input type="reset" value="Rénitialiser le formulaire" />
+		</form>
+
+
+
+		<script>
+			
+		</script>
+	</body> 
+</html>								
