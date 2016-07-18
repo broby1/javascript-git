@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="utf-8" />
+		<title>Les objets</title> 
+	</head>
+
+
+	<body>
+		
+		<script>
+			// Construction d'un objet "Person" via le constructeur
+			function Person (nick, age, sex, parent, work, friends) {
+				this.nick = nick; 
+				this.age = age; 
+				this.sex = sex; 
+				this.parent = parent;
+				this.work = work;
+				this.friends = friends;
+			}
+
+			// Je crée ici des variables qui vont contenir une instance de l'objet "Person" :
+			var seb = new Person ('Sebastien', 23, 'm', 'aîné', 'Javascripteur',[]);
+			var lau = new Person ('Laurence', 19, 'f', 'soeur', 'Sous-ooficier',[]);
+
+			alert(seb.nick); // Affiche "Sebastien"
+			alert(lau.nick); // Affiche "Laurence"
+
+			//Modifier les propriétés 
+			seb.nick = 'Bastien'; // Je change le prenom de Sebastien en Nick
+			seb.age = 44;
+
+			alert(seb.nick + ' a ' + seb.age + ' ans');
+
+			// Ajouter des methodes 
+			// Si je souhaite ajouter un ami dans le tableau "friends" il faudra proceder comme ceci :
+			seb.friends.push(new Person(
+					'Johnn', 
+					 19,
+					 'm', 
+					 'aîné',
+					 'Javascripteur aussi', 
+					 []
+				));
+
+			alert(seb.friends[0].age);
+
+
+		</script>
+	</body> 
+</html>								
