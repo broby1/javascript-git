@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="utf-8" />
+		<title>La gestion des temps</title> 
+	</head>
+
+
+	<body>
+		<img src="" alt="" id="myImg"  style="opacity: 1;" />
+		
+		<script>
+			// les sytstèmes de datation
+			var myDate = new Date('Sat, 04 May 2016 10:00:00 GMT+2:00');
+			alert('c\'est le mois :' + myDate.getMonth() + ' de l\'année !');
+
+			var myImg = document.getElementById('myImg');
+			
+			function anim() {
+				var s = myImg.style,
+				resultat = s.opacity = parseFloat(s.opacity) - 0.1;
+
+				if (resultat > 0.2) {
+					setTimeout(anim, 50); //  La fonction "anim" s'appelle elle même tant qu'elle n'a pas terminé son travail...
+				}
+			}
+
+			anim(); // Je lance la premiere phase d'animation
+		</script>
+	</body> 
+</html>								
