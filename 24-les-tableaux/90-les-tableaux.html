@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="utf-8" />
+		<title>Les tableaux</title> 
+	</head>
+
+
+	<body>
+		
+		
+		<script>
+			// contactener un tableau 
+			var monTabbleau = ['test 1', 'test 2', 'test 3'].concat(['toto', 'titi','tata']);
+			alert(monTabbleau);
+
+			// parcourir un tableau 
+			var monTab = ['c\'est', 'un', 'test'], 
+				length = monTab.length; 
+
+			monTab.forEach(function(value, index, array) {
+				alert(
+						'Index : ' + index
+						+ '\n' +
+						'Valeur : ' + value
+					);
+			});
+			alert(Array.isArray(['monTab'])); 
+		</script>
+	</body> 
+</html>								
