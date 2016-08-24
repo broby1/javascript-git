@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<title>L'audio</title> 
+		<meta charset="utf-8" />
+	</head>
+
+
+	<body>
+		<audio id="audioPlayer" ontimeupdate="(this)">
+			<source src="hypman.mp3"></source>
+			<source src="hyman.ogg"></source>
+		</audio>
+		<button class="control" onclick="play('audioPlayer', this)">Play</button>
+		<button class="control" onclick="resume('audioPlayer')">Stop</button>
+
+		<script>
+			function play(idPlayer, control) {
+				var Player = document.querySelector('#' + idPlayer);
+
+				if (Player.paused) {
+					player.play();
+					control.textContent = 'Pause';
+				} else {
+					player.pause();
+					control.textContent = 'Play';
+				} 
+			}
+
+
+			function resume(idPlayer) {
+				var player = document.querySelector('#' + idPlayer);
+
+				player.currentTime = 0;
+				player.pause();
+			}
+
+
+			function update(player) {
+				var duration = player.duration; // Durée totale
+				var time = player.currentTime; // Temps écoulé
+				var fraction = time / duration;
+				var percent = math.ceil(fraction * 100);
+
+				var progress = document.queSelector('#progressBar');
+
+				progress.style.width = percent + '%';
+				progress.textContent = percent + '%';
+			}
+
+			function formatTime(time) {
+				var hours = Math.floor(time / 3600);
+				var mins = Math.floor((time % 36000) / 60);
+				var secs = Math.floor(time % 60);
+
+				if (secs < 10) {
+					secs = "0" + secs;
+				} 
+
+				if (hours) {
+					if (min < 10) {
+						mins = "0" + mins;
+					}
+				}
+
+				return hours + ":" + mins + ":" + secs; // hh:mm:ss
+			} else {
+				return mins + ":" + secs; // mm:ss
+			}
+
+		</script>
+	</body> 
+</html>								

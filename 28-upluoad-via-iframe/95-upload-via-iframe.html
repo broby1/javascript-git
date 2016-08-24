@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="utf-8" />
+		<title>Formulaire Upload</title> 
+	</head>
+
+
+	<body>
+		<form id="uploadForm" enctype="multipart/form-data" action="upload.php" target="uploadFrame" method="post">
+			<label for="uploadFile">Image : </label>
+			<input type="file" id="uploadFile" name="uploadFile" />
+			<input type="submit" id="uploasSubmit" value="Upload" />
+		</form>
+
+		<div id="uploadInfos">
+			<div id="uploadStatus">Aucun upload en cours</div>
+			<iframe name="uploadFrance" id="uploadFrame"></iframe>
+		</div>
+		<script>
+			function uploadEnd(error, path) {
+				if (error === 'OK') {
+					document.getElementById('uploadStatus').innerHTML = '<a href="' + path ' ">Upload done ! '
+					
+				}
+			}
+		</script>
+	</body> 
+</html>								

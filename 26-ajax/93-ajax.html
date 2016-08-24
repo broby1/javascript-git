@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="utf-8" />
+		<title>Les objets images</title> 
+	</head>
+
+	<style>
+		#overlay {
+			display: none; /* Par defaut on cache l'overlay */
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			text-align: center; /* Pour centrer l'image que l'overlay contiendra */
+			background-color: rgba(0,0,0,0.6); /* Couleur noir avec une opacité à 60% */
+		}
+		
+		#overlay img {
+			margin-top: 100px;
+		}
+	
+		p {
+			margin-top: 300px;
+			text-align: center;
+		}
+
+	</style>
+
+	<body>
+		<p>
+			<a href="img/1.jpg" title="Afficher l'image originale"><img src="img/1_min.jpg" alt="miniature"></a>
+			<a href="img/2.jpg" title="Afficher l'image originale"><img src="img/2_min.jpg" alt="miniature"></a>
+			<a href="img/3.jpg" title="Afficher l'image originale"><img src="img/3_min.jpg" alt="miniature"></a>
+			<a href="img/4.jpg" title="Afficher l'image originale"><img src="img/4_min.jpg" alt="miniature"></a>
+		</p>
+
+		<div id="overlay"></div>
+
+		
+		<script>
+			var links = document.getElementsByTagName('a'),
+				linksLen = links.length;
+
+			for (var i = 0; i < linksLen; i++) {
+
+				links[i].onclick = function() {
+					// Vous pouvez très bien utiliser le DOM-2
+					displayImg(this); // On appelle notre fonction pour afficher les images et on lui passe le lien concerné
+					return false; // Et on bloque la redirection
+				};
+			}
+
+			function displayImg(link) {
+
+				var new Image(),
+				overlay = document.getElementById('overlay');
+
+				img.onload = function() {
+					overlay.innerHTML = '';
+					overlay.appenChild(img);
+				};
+
+				img.src = link.href;
+				overlay.style.display = 'block';
+				overlay.innerHTML = '<span>Chargement en cours ... </span>';
+			}
+
+			document.getElementById('overlay').onclick = function () {
+				this.style.display = 'none';
+			};
+
+		</script>
+	</body> 
+</html>								
